@@ -1,0 +1,35 @@
+{
+  "name": "cv_web",
+  "version": "1.0.0",
+  "description": "my cv",
+  "main": "index.js",
+  "repository": "https://github.com/GregDev62/v1",
+  "author": "GregDev62 <duquenne.gregoire@gmail.com>",
+  "license": "",
+  "scripts": {
+    "build": "webpack",
+    "local": "webpack serve"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.0",
+    "@mui/styled-engine-sc": "^5.1.0",
+    "@mui/styles": "^5.2.0",
+    "@svgr/webpack": "^5.5.0",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.2.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-react": "^7.12.13",
+    "prettier": "^2.2.1",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
