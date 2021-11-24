@@ -1,0 +1,34 @@
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #d6dee1;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border: 3px solid #0a192f;
+  border-radius: 10px;
+}
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0a192f;
+  color: #bbc6e5;
+  &.hidden {
+    overflow: hidden;
+  }
+  &.blur {
+    overflow: hidden;
+    header {
+      background-color: transparent;
+    }
+  }
+}

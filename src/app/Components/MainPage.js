@@ -29,9 +29,9 @@ const MainPage = () => {
     <>
       <div style={styles.background}>
         {displayTopBar(allocatedWidths.topBar)}
-        <br style={{ marginBottom: 50 }}></br>
+        <div style={{ height: 50 }}></div>
         <button>Bonjour</button>
-        <br style={{ marginBottom: 2000 }}></br>
+        <div style={{ height: 2000 }}></div>
         <div
           style={{
             height: 2000,
