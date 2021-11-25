@@ -1,6 +1,7 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: #d6dee1;
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   width: 12px;

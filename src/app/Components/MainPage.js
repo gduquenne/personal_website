@@ -21,6 +21,8 @@ const MainPage = () => {
     spreadSpaceToComponents(window.innerWidth)
   );
 
+  const [scrollTo, setScrollTo] = useState({ id: '', bool: false });
+
   useEffect(() => {
     const updateWindowWidth = () =>
       setAllocatedWidths(spreadSpaceToComponents(window.innerWidth));
@@ -28,9 +30,22 @@ const MainPage = () => {
     return () => window.removeEventListener('resize', updateWindowWidth);
   }, []);
 
+  useEffect(() => {
+    if (scrollTo.id.length !== 0) {
+      window.scroll({
+        top:
+          document.getElementById(scrollTo.id).offsetTop -
+          document.getElementById('topBar').offsetHeight
+      });
+    }
+  }, [scrollTo.bool]);
+
   return (
     <div className={classes.background}>
-      <TopBar allocatedWidth={allocatedWidths.topBar} />
+      <TopBar
+        allocatedWidth={allocatedWidths.topBar}
+        setScrollTo={id => setScrollTo({ id, bool: !scrollTo.bool })}
+      />
       <div style={{ height: 50 }}></div>
       <button>Bonjour</button>
       <div style={{ height: 2000 }}></div>
@@ -38,13 +53,15 @@ const MainPage = () => {
         style={{
           height: 2000,
           width: '100%',
-          backgroundColor: 'yellow',
-          paddingTop: 50
+          backgroundColor: 'yellow'
         }}
         id="about"
       >
         I'm there!
       </div>
+      <div id="experience"></div>
+      <div id="sandbox"></div>
+      <div id="contact"></div>
     </div>
   );
 };

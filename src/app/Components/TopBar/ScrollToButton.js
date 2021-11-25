@@ -10,14 +10,13 @@ import capitalizeFirstLetter from '../../Utils';
 
 //TODO: scroll to instead of href
 
-const ScrollToButton = ({ text }) => {
+const ScrollToButton = ({ text, setScrollTo }) => {
   const { language } = useContext(Context);
-  const href = `/#${text.en}`;
   return (
     <Button
-      href={href}
       size="small"
       sx={{ color: '#bbc6e5', marginRight: '20px' }}
+      onClick={() => setScrollTo(text.en)}
     >
       {capitalizeFirstLetter(text[language])}
     </Button>

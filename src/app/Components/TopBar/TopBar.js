@@ -14,16 +14,16 @@ import styleTopBar from '../../StyleSheets/styleTopBar';
 
 const useStyles = props => makeStyles(() => styleTopBar(props));
 
-const TopBar = ({ allocatedWidth }) => {
+const TopBar = ({ allocatedWidth, setScrollTo }) => {
   const classes = useStyles({ allocatedWidth })();
   return (
-    <div className={classes.topBar}>
+    <div id="topBar" className={classes.topBar}>
       <div className={classes.nameContainer}>Grégoire Duquenne</div>
       <div className={classes.buttonsContainer}>
-        <ScrollToButton text={texts.aboutBtn} />
-        <ScrollToButton text={texts.experienceBtn} />
-        <ScrollToButton text={texts.sandboxBtn} />
-        <ScrollToButton text={texts.contactBtn} />
+        <ScrollToButton text={texts.aboutBtn} setScrollTo={setScrollTo} />
+        <ScrollToButton text={texts.experienceBtn} setScrollTo={setScrollTo} />
+        <ScrollToButton text={texts.sandboxBtn} setScrollTo={setScrollTo} />
+        <ScrollToButton text={texts.contactBtn} setScrollTo={setScrollTo} />
         <LanguageSelect />
       </div>
     </div>
