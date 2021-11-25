@@ -8,14 +8,19 @@ import { Button } from '@mui/material';
 // Import Utils
 import capitalizeFirstLetter from '../../Utils';
 
-//TODO: scroll to instead of href
+// Import Styles
+import { makeStyles } from '@mui/styles';
+import styleScrollToButton from '../../StyleSheets/styleScrollToButton';
 
-const ScrollToButton = ({ text, setScrollTo }) => {
+const useStyles = props => makeStyles(() => styleScrollToButton(props));
+
+const ScrollToButton = ({ setScrollTo, isCurrentSectionOnView, text }) => {
   const { language } = useContext(Context);
+  const classes = useStyles({ selected: isCurrentSectionOnView })();
   return (
     <Button
       size="small"
-      sx={{ color: '#bbc6e5', marginRight: '20px' }}
+      className={classes.btn}
       onClick={() => setScrollTo(text.en)}
     >
       {capitalizeFirstLetter(text[language])}

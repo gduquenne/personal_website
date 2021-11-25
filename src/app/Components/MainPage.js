@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 
 // Import Custom Components
 import TopBar from './TopBar/TopBar';
+import AboutSection from './Sections/AboutSection';
+import ExperienceSection from './Sections/ExperienceSection';
+import SandboxSection from './Sections/SandboxSection';
+import ContactSection from './Sections/ContactSection';
 
 // Import Styles
 import { makeStyles } from '@mui/styles';
@@ -46,22 +50,11 @@ const MainPage = () => {
         allocatedWidth={allocatedWidths.topBar}
         setScrollTo={id => setScrollTo({ id, bool: !scrollTo.bool })}
       />
-      <div style={{ height: 50 }}></div>
-      <button>Bonjour</button>
-      <div style={{ height: 2000 }}></div>
-      <div
-        style={{
-          height: 2000,
-          width: '100%',
-          backgroundColor: 'yellow'
-        }}
-        id="about"
-      >
-        I'm there!
-      </div>
-      <div id="experience"></div>
-      <div id="sandbox"></div>
-      <div id="contact"></div>
+      <div id="intro" style={{ height: window.innerHeight }}></div>
+      <AboutSection />
+      <ExperienceSection />
+      <SandboxSection />
+      <ContactSection />
     </div>
   );
 };

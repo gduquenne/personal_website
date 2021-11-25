@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { UserContext } from '../Context/UserContext';
 
 // Import Styles
-import './style.scss';
+import './StyleSheets/style.scss';
 
 // Import Custom Components
 import MainPage from './Components/MainPage';

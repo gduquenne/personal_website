@@ -4,7 +4,7 @@ const styleTopBar = ({ allocatedWidth }) => {
       display: 'flex',
       alignItems: 'center',
       color: '#bbc6e5',
-      backgroundColor: '#0a192f',
+      backgroundColor: 'rgba(10, 25, 47, 0.2)',
       width: allocatedWidth,
       height: 50,
       top: 0,
@@ -17,8 +17,11 @@ const styleTopBar = ({ allocatedWidth }) => {
     buttonsContainer: {
       marginLeft: 'auto',
       display: 'flex',
-      alignContent: 'space-between',
+      alignItems: 'center',
       padding: '0 10px'
+    },
+    buttonContainer: {
+      marginRight: 20
     }
   };
 };
