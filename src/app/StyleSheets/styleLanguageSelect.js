@@ -1,24 +1,28 @@
+// Import Utils
+import COLORS from '../Utils/Colors';
+
 const styleLanguageSelect = () => {
   return {
-    formControl: {
-      '&.MuiFormControl-root': {
-        marginRight: 20
-      }
-    },
     select: {
-      height: 40,
+      height: 30.75,
       '&:hover': {
-        backgroundColor: 'rgba(25, 118, 210, 0.04)'
+        backgroundColor: 'rgba(25, 118, 210, 0.04)',
+        '& > div > span': {
+          color: COLORS.green
+        }
       },
       '& > div': {
         display: 'flex',
         alignItems: 'center',
         '& > span': {
-          color: '#bbc6e5'
+          textTransform: 'none',
+          fontSize: 16,
+          fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
+          color: COLORS.slate
         }
       },
       '& > svg[data-testid="ArrowDropDownIcon"]': {
-        fill: '#bbc6e5'
+        fill: COLORS.slate
       },
       '& > fieldset': {
         border: 'none'
@@ -28,12 +32,9 @@ const styleLanguageSelect = () => {
       marginRight: 10
     },
     textMenuItem: {
-      fontFamily: 'Roboto, Helvetica, Arial, sans-serif',
-      fontWeight: 500,
-      fontSize: '0.8125rem',
-      lineHeight: 1.75,
-      letterSpacing: '0.02857em',
-      textTransform: 'uppercase'
+      textTransform: 'none',
+      fontSize: 16,
+      fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace'
     }
   };
 };

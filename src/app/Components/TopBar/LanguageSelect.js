@@ -22,7 +22,7 @@ const LanguageSelect = () => {
   const { language, setUserLanguage } = useContext(Context);
   const classes = useStyles();
   return (
-    <FormControl className={classes.formControl}>
+    <FormControl>
       <Select
         className={classes.select}
         value={language}

@@ -1,8 +1,10 @@
 // Import Core
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import Context from '../../Context/UserContext';
 
 // Import Custom Components
 import TopBar from './TopBar/TopBar';
+import IntroSection from './Sections/IntroSection';
 import AboutSection from './Sections/AboutSection';
 import ExperienceSection from './Sections/ExperienceSection';
 import SandboxSection from './Sections/SandboxSection';
@@ -12,6 +14,9 @@ import ContactSection from './Sections/ContactSection';
 import { makeStyles } from '@mui/styles';
 import styleMainPage from '../StyleSheets/styleMainPage';
 
+// Import Texts
+import texts from '../Texts/textIntro';
+
 const useStyles = makeStyles(styleMainPage);
 
 const spreadSpaceToComponents = windowWidth => {
@@ -19,6 +24,7 @@ const spreadSpaceToComponents = windowWidth => {
 };
 
 const MainPage = () => {
+  const { language } = useContext(Context);
   const classes = useStyles();
 
   const [allocatedWidths, setAllocatedWidths] = useState(
@@ -45,16 +51,18 @@ const MainPage = () => {
   }, [scrollTo.bool]);
 
   return (
-    <div className={classes.background}>
+    <div>
       <TopBar
         allocatedWidth={allocatedWidths.topBar}
         setScrollTo={id => setScrollTo({ id, bool: !scrollTo.bool })}
       />
-      <div id="intro" style={{ height: window.innerHeight }}></div>
-      <AboutSection />
-      <ExperienceSection />
-      <SandboxSection />
-      <ContactSection />
+      <main>
+        <IntroSection />
+        <AboutSection />
+        <ExperienceSection />
+        <SandboxSection />
+        <ContactSection />
+      </main>
     </div>
   );
 };

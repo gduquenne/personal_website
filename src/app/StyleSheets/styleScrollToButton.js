@@ -1,13 +1,22 @@
+// Import Utils
+import COLORS from '../Utils/Colors';
+
 const styleScrollToButton = ({ selected }) => {
   let color;
   if (selected) {
-    color = '#7ef5e1';
+    color = COLORS.green;
   } else {
-    color = '#bbc6e5';
+    color = COLORS.slate;
   }
   return {
     btn: {
-      '&.MuiButton-root': { color }
+      '&.MuiButton-root': {
+        color,
+        textTransform: 'none',
+        fontSize: 16,
+        fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
+        '&:hover': { color: COLORS.green }
+      }
     }
   };
 };

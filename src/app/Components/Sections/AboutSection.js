@@ -10,9 +10,9 @@ const useStyles = makeStyles(styleSectionAbout);
 const AboutSection = () => {
   const classes = useStyles();
   return (
-    <div id="about" className={classes.section}>
+    <section id="about" className={classes.section}>
       about
-    </div>
+    </section>
   );
 };
 

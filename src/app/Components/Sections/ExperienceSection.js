@@ -10,9 +10,9 @@ const useStyles = makeStyles(styleSectionExperience);
 const ExperienceSection = () => {
   const classes = useStyles();
   return (
-    <div id="experience" className={classes.section}>
+    <section id="experience" className={classes.section}>
       experience
-    </div>
+    </section>
   );
 };
 

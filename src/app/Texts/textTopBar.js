@@ -1,4 +1,8 @@
 const texts = {
+  introBtn: {
+    en: 'intro',
+    fr: 'intro'
+  },
   aboutBtn: {
     en: 'about',
     fr: 'à propos'

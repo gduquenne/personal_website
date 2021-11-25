@@ -10,9 +10,9 @@ const useStyles = makeStyles(styleSectionSandbox);
 const SandboxSection = () => {
   const classes = useStyles();
   return (
-    <div id="sandbox" className={classes.section}>
+    <section id="sandbox" className={classes.section}>
       sandbox
-    </div>
+    </section>
   );
 };
 

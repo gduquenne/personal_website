@@ -10,9 +10,9 @@ const useStyles = makeStyles(styleSectionContact);
 const ContactSection = () => {
   const classes = useStyles();
   return (
-    <div id="contact" className={classes.section}>
+    <section id="contact" className={classes.section}>
       contact
-    </div>
+    </section>
   );
 };
 

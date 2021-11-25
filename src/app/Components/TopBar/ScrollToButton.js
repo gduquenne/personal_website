@@ -6,7 +6,7 @@ import Context from '../../../Context/UserContext';
 import { Button } from '@mui/material';
 
 // Import Utils
-import capitalizeFirstLetter from '../../Utils';
+import capitalizeFirstLetter from '../../Utils/Utils';
 
 // Import Styles
 import { makeStyles } from '@mui/styles';

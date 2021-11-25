@@ -18,7 +18,7 @@ const TopBar = ({ allocatedWidth, setScrollTo }) => {
   const classes = useStyles({ allocatedWidth })();
 
   const [currentSectionOnView, setCurrentSectionOnView] = useState(
-    getCurrentViewSection
+    getCurrentViewSection()
   );
 
   useEffect(() => {
@@ -33,33 +33,18 @@ const TopBar = ({ allocatedWidth, setScrollTo }) => {
     <div id="topBar" className={classes.topBar}>
       <div className={classes.nameContainer}>Grégoire Duquenne</div>
       <div className={classes.buttonsContainer}>
-        {displayScrollToButton(
-          classes,
-          setScrollTo,
-          currentSectionOnView,
-          'about'
-        )}
-        {displayScrollToButton(
-          classes,
-          setScrollTo,
-          currentSectionOnView,
-          'experience'
-        )}
-        {displayScrollToButton(
-          classes,
-          setScrollTo,
-          currentSectionOnView,
-          'sandbox'
-        )}
-        {displayScrollToButton(
-          classes,
-          setScrollTo,
-          currentSectionOnView,
-          'contact'
-        )}
-        <LanguageSelect />
+        {displayScrollToButtons(classes, setScrollTo, currentSectionOnView)}
+        <div className={classes.buttonContainer}>
+          <LanguageSelect />
+        </div>
       </div>
     </div>
+  );
+};
+
+const displayScrollToButtons = (classes, setScrollTo, currentSectionOnView) => {
+  return ['intro', 'about', 'experience', 'sandbox', 'contact'].map(section =>
+    displayScrollToButton(classes, setScrollTo, currentSectionOnView, section)
   );
 };
 
@@ -69,7 +54,7 @@ const displayScrollToButton = (
   currentSectionOnView,
   sectionName
 ) => (
-  <div className={classes.buttonContainer}>
+  <div key={sectionName} className={classes.buttonContainer}>
     <ScrollToButton
       setScrollTo={setScrollTo}
       isCurrentSectionOnView={currentSectionOnView === sectionName}
@@ -80,34 +65,17 @@ const displayScrollToButton = (
 
 const getCurrentViewSection = () => {
   const topBar = document.getElementById('topBar');
-  const aboutSection = document.getElementById('about');
-  const experienceSection = document.getElementById('experience');
-  const sandboxSection = document.getElementById('sandbox');
-  const contactSection = document.getElementById('contact');
-  const { scrollY } = window;
-  if (!topBar || scrollY < aboutSection.offsetTop - topBar.offsetHeight) {
-    return null;
-  } else {
-    const { offsetHeight: tbHeight } = topBar;
-    const { offsetTop: aboutTop } = aboutSection;
-    const { offsetTop: experienceTop } = experienceSection;
-    const { offsetTop: sandboxTop } = sandboxSection;
-    const { offsetTop: contactTop } = contactSection;
-    if (scrollY >= aboutTop - tbHeight && scrollY < experienceTop - tbHeight) {
-      return 'about';
-    } else if (
-      scrollY >= experienceTop - tbHeight &&
-      scrollY < sandboxTop - tbHeight
-    ) {
-      return 'experience';
-    } else if (
-      scrollY >= sandboxTop - tbHeight &&
-      scrollY < contactTop - tbHeight
-    ) {
-      return 'sandbox';
-    } else {
-      return 'contact';
+  if (topBar) {
+    const sections = document.getElementsByTagName('section');
+    const { scrollY } = window;
+    for (let i = 0; i < sections.length - 1; i++) {
+      if (scrollY < sections[i + 1].offsetTop - topBar.offsetHeight) {
+        return sections[i].id;
+      }
     }
+    return sections[sections.length - 1].id;
+  } else {
+    return 'intro';
   }
 };
 
