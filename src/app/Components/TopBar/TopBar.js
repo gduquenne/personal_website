@@ -1,16 +1,25 @@
+// Import Core
 import React from 'react';
 
+// Import Custom Components
 import ScrollToButton from './ScrollToButton';
 import LanguageSelect from './LanguageSelect';
 
+// Import Texts
 import texts from '../../Texts/textTopBar';
 
+// Import Styles
+import { makeStyles } from '@mui/styles';
+import styleTopBar from '../../StyleSheets/styleTopBar';
+
+const useStyles = props => makeStyles(() => styleTopBar(props));
+
 const TopBar = ({ allocatedWidth }) => {
-  const styles = calcStyles(allocatedWidth);
+  const classes = useStyles({ allocatedWidth })();
   return (
-    <div style={{ ...styles.topBar }}>
-      <div style={{ ...styles.nameContainer }}>Grégoire Duquenne</div>
-      <div style={{ ...styles.buttonsContainer }}>
+    <div className={classes.topBar}>
+      <div className={classes.nameContainer}>Grégoire Duquenne</div>
+      <div className={classes.buttonsContainer}>
         <ScrollToButton text={texts.aboutBtn} />
         <ScrollToButton text={texts.experienceBtn} />
         <ScrollToButton text={texts.sandboxBtn} />
@@ -19,31 +28,6 @@ const TopBar = ({ allocatedWidth }) => {
       </div>
     </div>
   );
-};
-
-const calcStyles = width => {
-  return {
-    topBar: {
-      width,
-      display: 'flex',
-      alignItems: 'center',
-      color: '#bbc6e5',
-      backgroundColor: '#0a192f',
-      height: 50,
-      top: 0,
-      position: 'fixed',
-      boxShadow: '0px 1px 10px black'
-    },
-    nameContainer: {
-      padding: '0 10px'
-    },
-    buttonsContainer: {
-      marginLeft: 'auto',
-      display: 'flex',
-      alignContent: 'space-between',
-      padding: '0 10px'
-    }
-  };
 };
 
 export default TopBar;

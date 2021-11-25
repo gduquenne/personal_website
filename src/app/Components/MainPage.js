@@ -1,19 +1,22 @@
+// Import Core
 import React, { useState, useEffect } from 'react';
+
+// Import Custom Components
 import TopBar from './TopBar/TopBar';
 
-const styles = {
-  background: {
-    minHeight: window.innerHeight,
-    width: '100%',
-    backgroundColor: '#0a192f'
-  }
-};
+// Import Styles
+import { makeStyles } from '@mui/styles';
+import styleMainPage from '../StyleSheets/styleMainPage';
+
+const useStyles = makeStyles(styleMainPage);
 
 const spreadSpaceToComponents = windowWidth => {
   return { topBar: windowWidth };
 };
 
 const MainPage = () => {
+  const classes = useStyles();
+
   const [allocatedWidths, setAllocatedWidths] = useState(
     spreadSpaceToComponents(window.innerWidth)
   );
@@ -26,30 +29,24 @@ const MainPage = () => {
   }, []);
 
   return (
-    <>
-      <div style={styles.background}>
-        {displayTopBar(allocatedWidths.topBar)}
-        <div style={{ height: 50 }}></div>
-        <button>Bonjour</button>
-        <div style={{ height: 2000 }}></div>
-        <div
-          style={{
-            height: 2000,
-            width: '100%',
-            backgroundColor: 'yellow',
-            paddingTop: 50
-          }}
-          id="about"
-        >
-          I'm there!
-        </div>
+    <div className={classes.background}>
+      <TopBar allocatedWidth={allocatedWidths.topBar} />
+      <div style={{ height: 50 }}></div>
+      <button>Bonjour</button>
+      <div style={{ height: 2000 }}></div>
+      <div
+        style={{
+          height: 2000,
+          width: '100%',
+          backgroundColor: 'yellow',
+          paddingTop: 50
+        }}
+        id="about"
+      >
+        I'm there!
       </div>
-    </>
+    </div>
   );
 };
-
-const displayTopBar = allocatedWidth => (
-  <TopBar allocatedWidth={allocatedWidth} />
-);
 
 export default MainPage;

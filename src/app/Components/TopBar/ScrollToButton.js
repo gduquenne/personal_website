@@ -1,10 +1,11 @@
+// Import Core
 import React, { useContext } from 'react';
 import Context from '../../../Context/UserContext';
 
-// Styled Components
+// Import MUI Components
 import { Button } from '@mui/material';
 
-// Utils
+// Import Utils
 import capitalizeFirstLetter from '../../Utils';
 
 //TODO: scroll to instead of href

@@ -1,11 +1,14 @@
+// Import Core
 import React, { useContext } from 'react';
-
 import Context from '../../../Context/UserContext';
 
+// Import MUI Components
 import { Select, MenuItem, SvgIcon, FormControl } from '@mui/material';
 
+// Import Texts
 import texts from '../../Texts/textTopBar';
 
+// Import Images
 import FrFlag from '../../../../public/svg/frFlag.svg';
 import GbFlag from '../../../../public/svg/gbFlag.svg';
 

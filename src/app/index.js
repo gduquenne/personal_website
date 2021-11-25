@@ -1,10 +1,13 @@
+// Import Core
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { UserContext } from '../Context/UserContext';
 
+// Import Styles
 import './style.scss';
 
+// Import Custom Components
 import MainPage from './Components/MainPage';
-import { UserContext } from '../Context/UserContext';
 
 ReactDOM.render(
   <UserContext>
@@ -12,5 +15,3 @@ ReactDOM.render(
   </UserContext>,
   document.getElementById('root')
 );
-
-// ReactDOM.render(<MainPage />, document.getElementById('root'));
