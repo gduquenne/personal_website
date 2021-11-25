@@ -12,26 +12,33 @@ import texts from '../../Texts/textTopBar';
 import FrFlag from '../../../../public/svg/frFlag.svg';
 import GbFlag from '../../../../public/svg/gbFlag.svg';
 
+// Import Styles
+import { makeStyles } from '@mui/styles';
+import styleLanguageSelect from '../../StyleSheets/styleLanguageSelect';
+
+const useStyles = makeStyles(styleLanguageSelect);
+
 const LanguageSelect = () => {
   const { language, setUserLanguage } = useContext(Context);
+  const classes = useStyles();
   return (
-    <FormControl sx={{ m: 0, minWidth: 120, marginRight: '20px' }}>
+    <FormControl className={classes.formControl}>
       <Select
-        sx={{ height: 40 }}
-        value={texts[`${language}Text`][language]}
+        className={classes.select}
+        value={language}
         onChange={e => setUserLanguage(e.target.value)}
       >
         <MenuItem value="en">
-          <SvgIcon sx={{ marginRight: '10px' }}>
+          <SvgIcon className={classes.iconMenuItem}>
             <GbFlag />
           </SvgIcon>
-          {texts.enText.en}
+          <span className={classes.textMenuItem}>{texts.enText.en}</span>
         </MenuItem>
         <MenuItem value="fr">
-          <SvgIcon sx={{ marginRight: '10px' }}>
+          <SvgIcon className={classes.iconMenuItem}>
             <FrFlag />
           </SvgIcon>
-          {texts.frText.fr}
+          <span className={classes.textMenuItem}>{texts.frText.fr}</span>
         </MenuItem>
       </Select>
     </FormControl>
