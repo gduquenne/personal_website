@@ -1,10 +1,10 @@
 {
-  "name": "cv_web",
+  "name": "v1",
   "version": "1.0.0",
-  "description": "my cv",
+  "description": "my personal website",
   "main": "index.js",
-  "repository": "https://github.com/GregDev62/v1",
-  "author": "GregDev62 <duquenne.gregoire@gmail.com>",
+  "repository": "https://github.com/gduquenne/v1",
+  "author": "gduquenne <duquenne.gregoire@gmail.com>",
   "license": "",
   "scripts": {
     "build": "webpack",
