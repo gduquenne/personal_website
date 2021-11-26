@@ -34,8 +34,8 @@ const texts = [
       fr: "Ma tâche principale était de penser et développer la partie front-end du coeur du projet, le board. Partie étant essentiellement composée d'intéractions entre les composants et évènements utilisateurs."
     },
     {
-      en: 'Techno used :\n\tJavascript - React - Material-UI - Fabric.js',
-      fr: 'Technologies utilisées :\n\tJavascript - React - Material-UI - Fabric.js'
+      en: 'Techno used :\n\tJavascript - React - Material-UI - Fabric.js - Node.js - WebSockets - MongoDB - JSON',
+      fr: 'Technologies utilisées :\n\tJavascript - React - Material-UI - Fabric.js - Node.js - WebSockets - MongoDB - JSON'
     },
     {
       en: 'Project Management :\n\tMethod -> Scrum\n\tTool -> Jira',

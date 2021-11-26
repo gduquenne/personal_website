@@ -1,7 +1,11 @@
 const styleSectionSandbox = () => {
   return {
     section: {
-      height: window.innerHeight
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: window.innerHeight,
+      padding: '0% 20%'
     }
   };
 };
