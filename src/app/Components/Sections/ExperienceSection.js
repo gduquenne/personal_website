@@ -76,12 +76,7 @@ const displayTabsContent = (classes, language, tabOpen) => {
               <ul>
                 {paragraphs.map((paragraph, i) => (
                   <li key={`p${i}`}>
-                    <p
-                      className={classes.expPara}
-                      style={{ whiteSpace: 'pre-wrap' }}
-                    >
-                      {paragraph[language]}
-                    </p>
+                    <p className={classes.expPara}>{paragraph[language]}</p>
                   </li>
                 ))}
               </ul>

@@ -26,7 +26,7 @@ const texts = [
       fr: 'Août 2020 - Juillet 2021'
     },
     {
-      en: 'Online Whiteboard Tool development within a international team.',
+      en: 'Online Whiteboard Tool development within an international team.',
       fr: 'Développement d\'un "Tableau blanc en ligne" avec une équipe de collaborateurs venant de l\'internationale.'
     },
     {

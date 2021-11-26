@@ -52,6 +52,7 @@ const styleSectionExperience = ({ tabOpen, nbTabs }) => {
       marginBottom: 4
     },
     expPara: {
+      whiteSpace: 'pre-wrap',
       fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
       fontSize: 16
     }
