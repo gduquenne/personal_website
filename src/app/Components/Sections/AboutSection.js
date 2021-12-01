@@ -7,7 +7,7 @@ import { makeStyles } from '@mui/styles';
 import styleSectionAbout from '../../StyleSheets/styleSectionAbout';
 
 // Import Images
-import OnePunchManMoon from '../../../../public/images/OnePunchManMoon.jpg';
+import onePunchManMoon from '../../../../public/images/onePunchManMoon.jpg';
 
 // Import Texts
 import texts from '../../Texts/textAbout';
@@ -20,18 +20,59 @@ const AboutSection = () => {
   return (
     <section id="about" className={classes.section}>
       <div className={classes.content}>
-        <p>{texts[0][language]}</p>
-        <ul>
-          {texts.technos.map((techno, index) => (
-            <li key={index}>{techno}</li>
-          ))}
-        </ul>
+        {displayParagraphs(texts.paragraphs, language, classes)}
+        {displayTechnos(texts.technos)}
       </div>
-      <div>
-        <img src={OnePunchManMoon} />
-      </div>
+      <img src={onePunchManMoon} className={classes.profilImg} />
     </section>
   );
 };
+
+const displayParagraphs = (paragraphs, language, classes) => {
+  return (
+    <>
+      {paragraphs.map((paragraph, index) => {
+        if (Array.isArray(paragraph)) {
+          return (
+            <p key={index}>
+              {displayParagraphWithLinks(paragraph, language, classes)}
+            </p>
+          );
+        } else {
+          return <p key={index}>{paragraph[language]}</p>;
+        }
+      })}
+    </>
+  );
+};
+
+const displayParagraphWithLinks = (array, language, classes) => (
+  <>
+    {array.map((part, index) => {
+      if (Array.isArray(part[language])) {
+        return (
+          <a
+            key={index}
+            href={part[language][1]}
+            className={classes.link}
+            target="_blank"
+          >
+            {part[language][0]}
+          </a>
+        );
+      } else {
+        return <span key={index}>{part[language]}</span>;
+      }
+    })}
+  </>
+);
+
+const displayTechnos = technos => (
+  <ul>
+    {technos.map((techno, index) => (
+      <li key={index}>{techno}</li>
+    ))}
+  </ul>
+);
 
 export default AboutSection;

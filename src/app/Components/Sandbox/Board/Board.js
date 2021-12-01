@@ -9,8 +9,9 @@ const Board = () => {
   }, []);
   const initBoard = () => {
     const canvas = new fabric.Canvas('board', {
-      height: 200,
-      width: 400,
+      height: 600,
+      width: 1200,
+      backgroundColor: 'white',
       centeredRotation: true,
       freeDrawingBrush: new fabric.PencilBrush({ decimate: 8 })
     });

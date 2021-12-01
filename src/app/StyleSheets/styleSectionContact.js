@@ -1,7 +1,8 @@
 const styleSectionContact = () => {
   return {
     section: {
-      height: window.innerHeight
+      height: window.innerHeight,
+      padding: '70px 20%'
     }
   };
 };

@@ -9,7 +9,7 @@ const styleSectionExperience = ({ tabOpen, nbTabs }) => {
       alignItems: 'center',
       justifyContent: 'center',
       height: window.innerHeight,
-      padding: '0% 20%',
+      padding: '70px 20%',
       fontWeight: 400,
       fontSize: 16,
       fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace'

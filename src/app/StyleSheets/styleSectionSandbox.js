@@ -5,7 +5,7 @@ const styleSectionSandbox = () => {
       alignItems: 'center',
       justifyContent: 'center',
       height: window.innerHeight,
-      padding: '0% 20%'
+      padding: '70px 20%'
     }
   };
 };

@@ -69,7 +69,7 @@ const getCurrentViewSection = () => {
     const sections = document.getElementsByTagName('section');
     const { scrollY } = window;
     for (let i = 0; i < sections.length - 1; i++) {
-      if (scrollY < sections[i + 1].offsetTop - topBar.offsetHeight) {
+      if (scrollY < sections[i + 1].offsetTop) {
         return sections[i].id;
       }
     }

@@ -43,9 +43,7 @@ const MainPage = () => {
   useEffect(() => {
     if (scrollTo.id.length !== 0) {
       window.scroll({
-        top:
-          document.getElementById(scrollTo.id).offsetTop -
-          document.getElementById('topBar').offsetHeight
+        top: document.getElementById(scrollTo.id).offsetTop
       });
     }
   }, [scrollTo.bool]);

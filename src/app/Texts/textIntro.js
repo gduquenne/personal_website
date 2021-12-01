@@ -12,8 +12,8 @@ const texts = {
     fr: 'Je suis développeur.'
   },
   part4: {
-    en: "I'm a software engineer specializing in building digital experiences, open to new opportunities.",
-    fr: "Je suis software engineer specialisé dans la création d'expériences numériques, ouvert à de nouvelles opportunités."
+    en: "I'm a software engineer, specializing in building digital experiences, at your service.",
+    fr: "Je suis software engineer, specialisé dans la création d'expériences numériques, à votre service."
   }
 };
 

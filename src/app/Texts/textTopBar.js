@@ -13,7 +13,7 @@ const texts = {
   },
   sandboxBtn: {
     en: 'sandbox',
-    fr: 'à propos'
+    fr: 'sandbox'
   },
   contactBtn: {
     en: 'contact',

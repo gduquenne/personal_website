@@ -7,8 +7,9 @@ const styleSectionIntro = () => {
       display: 'flex',
       alignItems: 'center',
       height: window.innerHeight,
-      padding: '0% 20%',
+      padding: '70px 20%',
       '& > div': {
+        maxHeight: 'fit-content',
         '& > h1': {
           margin: '0 0 30px 0',
           color: COLORS.green,
