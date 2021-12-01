@@ -14,7 +14,6 @@ const SandboxSection = () => {
   const classes = useStyles();
   return (
     <section id="sandbox" className={classes.section}>
-      test
       <Board />
     </section>
   );
