@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
@@ -26,8 +27,15 @@ module.exports = {
   },
   entry: `${__dirname}/src/app/index.js`,
   output: {
-    filename: 'transformed.js',
+    filename: '[name].bundle.js',
     path: `${__dirname}/build`
+  },
+  devServer: {
+    client: {
+      overlay: true
+    },
+    hot: true,
+    watchFiles: ['src/*', 'index.html']
   },
   plugins: [
     new HtmlWebPackPlugin({
@@ -37,6 +45,10 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
-    })
+    }),
+    new CopyWebpackPlugin({
+      patterns: ['index.html']
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
