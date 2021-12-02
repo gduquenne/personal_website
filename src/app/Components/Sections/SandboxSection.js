@@ -2,7 +2,6 @@
 import React from 'react';
 
 // Import Custom Components
-import Board from '../Sandbox/Board/Board';
 import Maintenance from '../../Utils/Maintenance';
 
 // Import Styles
@@ -16,7 +15,6 @@ const SandboxSection = () => {
   return (
     <section id="sandbox" className={classes.section}>
       <Maintenance />
-      {/* <Board /> */}
     </section>
   );
 };

@@ -1,7 +1,11 @@
 // Import Utils
-import COLORS from '../Utils/Colors';
+import COLORS from '../Utils/Style/Colors';
+import FONTFAMILIES from '../Utils/Style/FontFamilies';
+import FONTSIZES from '../Utils/Style/FontSizes';
+import LINKFLASH from '../Utils/Style/LinkFlash';
 
 const styleSectionAbout = () => {
+  const fontsizes = calcFontsizes();
   return {
     section: {
       display: 'flex',
@@ -15,13 +19,13 @@ const styleSectionAbout = () => {
       '& > p': {
         lineHeight: 1.6,
         color: COLORS.slate,
-        fontFamily:
-          'Calibre, Inter, San Francisco, SF Pro Text, -apple-system,system-ui,sans-serif',
-        fontSize: 16,
+        fontFamily: FONTFAMILIES.sans,
+        fontSize: fontsizes.main,
         maxWidth: 540,
         whiteSpace: 'pre-wrap',
         '& > a': {
-          color: COLORS.green
+          color: COLORS.green,
+          ...LINKFLASH
         }
       },
       '& > ul': {
@@ -31,15 +35,30 @@ const styleSectionAbout = () => {
         '& > li': {
           color: COLORS.lightSlate,
           marginBottom: 10,
-          fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
-          fontSize: 13
+          fontFamily: FONTFAMILIES.mono,
+          fontSize: fontsizes.techno
         }
       }
     },
     profilImg: {
-      height: 600
+      height: window.innerHeight * 0.6
     }
   };
+};
+
+const calcFontsizes = () => {
+  const { innerHeight } = window;
+  if (innerHeight > 800) {
+    return {
+      main: FONTSIZES.md,
+      techno: FONTSIZES.xs
+    };
+  } else {
+    return {
+      main: FONTSIZES.sm,
+      techno: FONTSIZES.xxs
+    };
+  }
 };
 
 export default styleSectionAbout;

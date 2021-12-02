@@ -1,5 +1,7 @@
 // Import Utils
-import COLORS from '../Utils/Colors';
+import COLORS from '../Utils/Style/Colors';
+import FONTFAMILIES from '../Utils/Style/FontFamilies';
+import FONTSIZES from '../Utils/Style/FontSizes';
 
 const styleScrollToButton = ({ selected }) => {
   let color;
@@ -13,8 +15,8 @@ const styleScrollToButton = ({ selected }) => {
       '&.MuiButton-root': {
         color,
         textTransform: 'none',
-        fontSize: 16,
-        fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
+        fontSize: FONTSIZES.md,
+        fontFamily: FONTFAMILIES.mono,
         '&:hover': { color: COLORS.green }
       }
     }

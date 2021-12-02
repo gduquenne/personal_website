@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 // Import Custom Components
 import ScrollToButton from './ScrollToButton';
 import LanguageSelect from './LanguageSelect';
+import Github from '../../../../public/svg/github.svg';
+import LinkedIn from '../../../../public/svg/linkedin.svg';
 
 // Import Texts
 import texts from '../../Texts/textTopBar';
@@ -32,6 +34,20 @@ const TopBar = ({ allocatedWidth, setScrollTo }) => {
   return (
     <div id="topBar" className={classes.topBar}>
       <div className={classes.nameContainer}>Grégoire Duquenne</div>
+      <a
+        href="https://github.com/gduquenne"
+        target="_blank"
+        style={{ marginLeft: 20 }}
+      >
+        <Github className={classes.icon} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/gr%C3%A9goire-duquenne-295027163/"
+        target="_blank"
+        style={{ marginLeft: 20 }}
+      >
+        <LinkedIn className={classes.icon} />
+      </a>
       <div className={classes.buttonsContainer}>
         {displayScrollToButtons(classes, setScrollTo, currentSectionOnView)}
         <div className={classes.buttonContainer}>

@@ -1,7 +1,7 @@
 // Import Utils
-import COLORS from '../Utils/Colors';
-
-// fontFamily: 'Calibre, Inter, San Francisco, SF Pro Text, -apple-system,system-ui,sans-serif',
+import COLORS from '../Utils/Style/Colors';
+import FONTFAMILIES from '../Utils/Style/FontFamilies';
+import FONTSIZES from '../Utils/Style/FontSizes';
 
 const styleTopBar = ({ allocatedWidth }) => {
   return {
@@ -20,8 +20,8 @@ const styleTopBar = ({ allocatedWidth }) => {
       padding: '0 10px 0 20px',
       color: COLORS.lightSlate,
       textTransform: 'none',
-      fontSize: 16,
-      fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace'
+      fontSize: FONTSIZES.md,
+      fontFamily: FONTFAMILIES.mono
     },
     buttonsContainer: {
       marginLeft: 'auto',
@@ -31,6 +31,15 @@ const styleTopBar = ({ allocatedWidth }) => {
     },
     buttonContainer: {
       marginRight: 20
+    },
+    icon: {
+      stroke: COLORS.green,
+      strokeWidth: 2,
+      fill: 'none',
+      '&:hover': {
+        cursor: 'pointer',
+        transform: 'scale(1.1)'
+      }
     }
   };
 };

@@ -1,5 +1,7 @@
 // Import Utils
-import COLORS from '../Utils/Colors';
+import COLORS from '../Utils/Style/Colors';
+import FONTFAMILIES from '../Utils/Style/FontFamilies';
+import FONTSIZES from '../Utils/Style/FontSizes';
 
 const styleLanguageSelect = () => {
   return {
@@ -16,8 +18,8 @@ const styleLanguageSelect = () => {
         alignItems: 'center',
         '& > span': {
           textTransform: 'none',
-          fontSize: 16,
-          fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
+          fontSize: FONTSIZES.md,
+          fontFamily: FONTFAMILIES.mono,
           color: COLORS.slate
         }
       },
@@ -33,8 +35,8 @@ const styleLanguageSelect = () => {
     },
     textMenuItem: {
       textTransform: 'none',
-      fontSize: 16,
-      fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace'
+      fontSize: FONTSIZES.md,
+      fontFamily: FONTFAMILIES.mono
     }
   };
 };

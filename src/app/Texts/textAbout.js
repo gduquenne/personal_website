@@ -41,7 +41,7 @@ const part4 = [
       ' Some methods and tools help me to make the code clearer and more optimised, I particularly think to ',
     fr:
       "J'ai toujours su penser les choses plus compliquées qu'elles ne le sont réellement, néanmoins cela me vaut de ne jamais être effrayé par la tâche, quelque soit sa complexité." +
-      " Certaines méthodes et outils m'aident notamment à rendre le code toujours plus clair et optimisé, je pense particulièrement à la programmation fonctionnelleSonarCloud."
+      " Certaines méthodes et outils m'aident notamment à rendre le code toujours plus clair et optimisé, je pense particulièrement à la "
   },
   {
     en: [

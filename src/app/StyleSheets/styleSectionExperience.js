@@ -1,4 +1,8 @@
-import COLORS from '../Utils/Colors';
+// Import Utils
+import COLORS from '../Utils/Style/Colors';
+import FONTFAMILIES from '../Utils/Style/FontFamilies';
+import FONTSIZES from '../Utils/Style/FontSizes';
+import TRANSITIONS from '../Utils/Style/Transitions';
 
 const styleSectionExperience = ({ tabOpen, nbTabs }) => {
   const leftbarTabHeight = 40;
@@ -11,8 +15,8 @@ const styleSectionExperience = ({ tabOpen, nbTabs }) => {
       height: window.innerHeight,
       padding: '70px 20%',
       fontWeight: 400,
-      fontSize: 16,
-      fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace'
+      fontSize: FONTSIZES.md,
+      fontFamily: FONTFAMILIES.mono
     },
     leftbar: {
       display: 'flex',
@@ -37,9 +41,8 @@ const styleSectionExperience = ({ tabOpen, nbTabs }) => {
     },
     expContentHead: {
       fontWeight: 600,
-      fontSize: 30,
-      fontFamily:
-        'Calibre, Inter, San Francisco, SF Pro Text, -apple-system,system-ui,sans-serif',
+      fontSize: FONTSIZES.header,
+      fontFamily: FONTFAMILIES.sans,
       marginBottom: 4
     },
     expTitle: { color: COLORS.lightSlate },
@@ -47,14 +50,14 @@ const styleSectionExperience = ({ tabOpen, nbTabs }) => {
       color: COLORS.green
     },
     expDate: {
-      fontSize: 14,
+      fontSize: FONTSIZES.sm,
       fontWeight: 400,
       marginBottom: 4
     },
     expPara: {
       whiteSpace: 'pre-wrap',
-      fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
-      fontSize: 16
+      fontFamily: FONTFAMILIES.mono,
+      fontSize: FONTSIZES.md
     }
   };
 };
@@ -78,10 +81,10 @@ const calcTabClasses = (tabOpen, nbTabs, leftbarTabHeight) => {
       backgroundColor: COLORS.navy,
       border: 'none',
       textAlign: 'left',
-      transition: 'all 0.25s cubic-bezier(0.645,0.045,0.355,1)',
+      transition: TRANSITIONS.all,
       fontWeight: 400,
-      fontSize: 16,
-      fontFamily: 'SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace',
+      fontSize: FONTSIZES.md,
+      fontFamily: FONTFAMILIES.mono,
       '&:hover': {
         cursor: 'pointer',
         backgroundColor: COLORS.lightNavy,
