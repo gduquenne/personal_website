@@ -7,7 +7,7 @@ import { makeStyles } from '@mui/styles';
 import styleSectionAbout from '../../StyleSheets/styleSectionAbout';
 
 // Import Images
-import onePunchManMoon from '../../../../public/images/onePunchManMoon.jpg';
+import onePunchManMoon from '../../../../public/images/onePunchManMoon.png';
 
 // Import Texts
 import texts from '../../Texts/textAbout';
@@ -20,7 +20,7 @@ const AboutSection = () => {
   return (
     <section id="about" className={classes.section}>
       <div className={classes.content}>
-        {displayParagraphs(texts.paragraphs, language, classes)}
+        {displayParagraphs(texts.paragraphs, language)}
         {displayTechnos(texts.technos)}
       </div>
       <img src={onePunchManMoon} className={classes.profilImg} />
@@ -28,15 +28,13 @@ const AboutSection = () => {
   );
 };
 
-const displayParagraphs = (paragraphs, language, classes) => {
+const displayParagraphs = (paragraphs, language) => {
   return (
     <>
       {paragraphs.map((paragraph, index) => {
         if (Array.isArray(paragraph)) {
           return (
-            <p key={index}>
-              {displayParagraphWithLinks(paragraph, language, classes)}
-            </p>
+            <p key={index}>{displayParagraphWithLinks(paragraph, language)}</p>
           );
         } else {
           return <p key={index}>{paragraph[language]}</p>;
@@ -46,7 +44,7 @@ const displayParagraphs = (paragraphs, language, classes) => {
   );
 };
 
-const displayParagraphWithLinks = (array, language, classes) => (
+const displayParagraphWithLinks = (array, language) => (
   <>
     {array.map((part, index) => {
       if (Array.isArray(part[language])) {
@@ -54,7 +52,7 @@ const displayParagraphWithLinks = (array, language, classes) => (
           <a
             key={index}
             href={part[language][1]}
-            className={classes.link}
+            className="link-flash"
             target="_blank"
           >
             {part[language][0]}

@@ -2,7 +2,6 @@
 import COLORS from '../Utils/Style/Colors';
 import FONTFAMILIES from '../Utils/Style/FontFamilies';
 import FONTSIZES from '../Utils/Style/FontSizes';
-import LINKFLASH from '../Utils/Style/LinkFlash';
 
 const styleSectionAbout = () => {
   const fontsizes = calcFontsizes();
@@ -25,7 +24,7 @@ const styleSectionAbout = () => {
         whiteSpace: 'pre-wrap',
         '& > a': {
           color: COLORS.green,
-          ...LINKFLASH
+          textDecoration: 'none'
         }
       },
       '& > ul': {

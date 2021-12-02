@@ -61,16 +61,13 @@ const displayTabsContent = (classes, language, tabOpen) => {
               <div className={classes.expContentHead}>
                 <span className={classes.expTitle}>{title[language]}</span>
                 &nbsp;
-                <span className={classes.expCompany}>
-                  @&nbsp;
-                  <a
-                    className={classes.expCompany}
-                    href={link[language]}
-                    target="_blank"
-                  >
-                    {company[language]}
-                  </a>
-                </span>
+                <a
+                  className={`${classes.expCompany} link-flash`}
+                  href={link[language]}
+                  target="_blank"
+                >
+                  @&nbsp;{company[language]}
+                </a>
               </div>
               <div className={classes.expDate}>{date[language]}</div>
               <ul>
