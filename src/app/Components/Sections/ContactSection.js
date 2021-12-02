@@ -5,13 +5,16 @@ import React from 'react';
 import { makeStyles } from '@mui/styles';
 import styleSectionContact from '../../StyleSheets/styleSectionContact';
 
+// Import Custom Components
+import Maintenance from '../../Utils/Maintenance';
+
 const useStyles = makeStyles(styleSectionContact);
 
 const ContactSection = () => {
   const classes = useStyles();
   return (
     <section id="contact" className={classes.section}>
-      contact
+      <Maintenance />
     </section>
   );
 };
