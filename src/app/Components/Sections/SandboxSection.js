@@ -3,6 +3,7 @@ import React from 'react';
 
 // Import Custom Components
 import Maintenance from '../../Utils/Maintenance';
+import Board from '../Sandbox/Board/Board';
 
 // Import Styles
 import { makeStyles } from '@mui/styles';
@@ -14,7 +15,8 @@ const SandboxSection = () => {
   const classes = useStyles();
   return (
     <section id="sandbox" className={classes.section}>
-      <Maintenance />
+      {/* <Maintenance /> */}
+      <Board />
     </section>
   );
 };
