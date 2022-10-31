@@ -1,31 +1,36 @@
 {
   "name": "v1",
   "version": "1.0.0",
-  "description": "my personal website",
+  "description": "My Personal Website",
   "main": "index.js",
   "repository": "https://github.com/gduquenne/v1",
   "author": "gduquenne <duquenne.gregoire@gmail.com>",
   "license": "",
   "scripts": {
     "build": "webpack",
-    "local": "webpack serve"
+    "local": "webpack serve --open --config webpack.config.js"
   },
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/material": "^5.2.0",
     "@mui/styled-engine-sc": "^5.1.0",
     "@mui/styles": "^5.2.0",
-    "@svgr/webpack": "^5.5.0",
+    "@svgr/webpack": "^6.4.0",
     "babel-loader": "^8.2.2",
     "css-loader": "^6.5.1",
-    "fabric": "^4.6.0",
+    "fabric": "^5.2.4",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jspdf": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sass": "^1.43.4",
-    "sass-loader": "^12.3.0",
+    "sass-loader": "^13.1.0",
     "style-loader": "^3.3.1",
     "styled-components": "^5.3.3"
   },
@@ -36,6 +41,6 @@
     "prettier": "^2.2.1",
     "webpack": "^5.64.3",
     "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^4.11.1"
   }
 }

@@ -7,7 +7,7 @@ import { makeStyles } from '@mui/styles';
 import styleSectionAbout from '../../StyleSheets/styleSectionAbout';
 
 // Import Images
-import onePunchManMoon from '../../../../public/images/onePunchManMoon.png';
+import onePunchManMoon from '../../../../public/img/profile/onePunchManMoon.png';
 
 // Import Texts
 import texts from '../../Texts/textAbout';

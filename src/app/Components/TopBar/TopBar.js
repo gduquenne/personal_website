@@ -9,8 +9,8 @@ import LanguageSelect from './LanguageSelect';
 import texts from '../../Texts/textTopBar';
 
 // Import Images
-import Github from '../../../../public/svg/github.svg';
-import LinkedIn from '../../../../public/svg/linkedin.svg';
+import Github from '../../../../public/img/github/github.svg';
+import LinkedIn from '../../../../public/img/social-networks/linkedin.svg';
 
 // Import Styles
 import { makeStyles } from '@mui/styles';
@@ -36,11 +36,11 @@ const TopBar = ({ allocatedWidth, setScrollTo }) => {
   return (
     <div id="topBar" className={classes.topBar}>
       <div className={classes.nameContainer}>Grégoire Duquenne</div>
-      {displayIcons(classes)}
+      {/* {displayIcons(classes)} */}
       <div className={classes.buttonsContainer}>
         {displayScrollToButtons(classes, setScrollTo, currentSectionOnView)}
         <div className={classes.buttonContainer}>
-          <LanguageSelect />
+          {/* <LanguageSelect /> */}
         </div>
       </div>
     </div>

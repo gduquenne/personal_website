@@ -68,3 +68,63 @@ body {
     }
   }
 }
+
+
+
+@font-face {
+  font-family: 'alexbrush_regular';
+  src: url('../../../public/font-families/alexbrush-regular/alexbrush-regular-webfont.woff2')
+      format('woff2'),
+    url('../../../public/font-families/alexbrush-regular/alexbrush-regular-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kaushanscript_regular';
+  src: url('../../../public/font-families/kaushanscript-regular/kaushanscript-regular-webfont.woff2')
+      format('woff2'),
+    url('../../../public/font-families/kaushanscript-regular/kaushanscript-regular-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neon_glow_regular';
+  src: url('../../../public/font-families/neon_glow/neon_glow-webfont.woff2')
+      format('woff2'),
+    url('../../../public/font-families/neon_glow/neon_glow-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensans_regular';
+  src: url('../../../public/font-families/opensans/opensans-regular-webfont.woff2')
+      format('woff2'),
+    url('../../../public/font-families/opensans/opensans-regular-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'opensans_regular';
+  src: url('../../../public/font-families/opensans/opensans-regular-webfont.woff2')
+      format('woff2'),
+    url('../../../public/font-families/opensans/opensans-regular-webfont.woff')
+      format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arial';
+  src: url('../../../public/font-families/Arial/Arial.woff2') format('woff2'),
+    url('../../../public/font-families/Arial/Arial.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

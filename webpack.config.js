@@ -6,9 +6,17 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jss|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader'
+        }
       },
       {
         test: /\.svg$/,
@@ -19,8 +27,8 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        loader: 'file-loader'
+        test: /\.(gif|jpe?g|png|svg|woff(2)?)$/i,
+        loader: 'file-loader',
       }
     ]
   },

@@ -9,8 +9,8 @@ import { Select, MenuItem, SvgIcon, FormControl } from '@mui/material';
 import texts from '../../Texts/textTopBar';
 
 // Import Images
-import FrFlag from '../../../../public/svg/frFlag.svg';
-import GbFlag from '../../../../public/svg/gbFlag.svg';
+import FrFlag from '../../../../public/img/flags/frFlag.svg';
+import GbFlag from '../../../../public/img/flags/gbFlag.svg';
 
 // Import Styles
 import { makeStyles } from '@mui/styles';
